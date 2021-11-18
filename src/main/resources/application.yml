@@ -1,0 +1,17 @@
+#logging
+logging:
+  level:
+    com:
+      creactiviti: DEBUG
+piper:
+  serialization:
+    date-format: yyyy-MM-dd'T'HH:mm:ssZZ
+  persistence:
+    provider: simple
+#JSON
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    date-format: ${piper.serialization.date-format}
+    time-zone: America/Los_Angeles
